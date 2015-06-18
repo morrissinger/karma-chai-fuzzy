@@ -12,7 +12,7 @@
     "chai",
     "chai-fuzzy"
   ],
-  "version": "0.0.9",
+  "version": "0.0.91",
   "author": {
     "name": "Morris Singer",
     "email": "morrissinger@gmail.com"

@@ -71,7 +71,6 @@ var frameworks = {
     var required = requireUsed(files);
 
     // RequireJS environment also need chai-adapter, as in most other karma-chai-*
-    files.unshift(pattern(path.join(__dirname, 'chai-fuzzy-adapter.js')));
     if (!required) {
       files.unshift(pattern(path.join(__dirname, 'function-bind-polyfill.js')));
     } else {
