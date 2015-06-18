@@ -15,18 +15,13 @@ module.exports = function (config) {
 
       // included frameworks
       'chai',
-      'chai-as-promised',
-      'sinon-chai',
-      'chai-jquery',
-      'chai-things'
+      'chai-fuzzy'
     ],
 
     plugins: ['karma-*', require('./index.js')],
 
     // list of files / patterns to load in the browser
     files: [
-      'node_modules/jquery/dist/jquery.js',
-      'node_modules/es6-promise/dist/es6-promise.js',
       'test/*.js'
     ],
 
@@ -55,7 +50,7 @@ module.exports = function (config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['PhantomJS'],
+    browsers: ['Chrome'],
 
 
     // Continuous Integration mode
