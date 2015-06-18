@@ -1,7 +1,5 @@
 /* eslint-disable no-unused-expressions */
-ES6Promise.polyfill();
-
-describe('chai and plugins', function () {
+describe('chai', function () {
   it('chai', function () {
     true.should.be.true;
     expect(true).to.be.true;
@@ -9,16 +7,19 @@ describe('chai and plugins', function () {
   });
 
   describe('chai-fuzzy', function () {
-    it('should', function () {
-      return Promise.resolve(true).should.eventually.equal(true);
+    it('should', function (done) {
+      ({foo: 'bar'}).should.be.like({foo: 'bar'});
+      done();
     });
 
-    it('expect', function () {
-      return expect(Promise.resolve(true)).to.eventually.equal(true);
+    it('expect', function (done) {
+      expect({foo: 'bar'}).to.be.like({foo: 'bar'});
+      done();
     });
 
-    it('assert', function () {
-      return assert.eventually.equal(Promise.resolve(true), true, 'This had better be true, eventually');
+    it('assert', function (done) {
+      assert.like({foo: 'bar'}, {foo: 'bar'}, 'This had better be true.');
+      done();
     });
   });
 

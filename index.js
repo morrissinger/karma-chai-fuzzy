@@ -65,48 +65,22 @@ var frameworks = {
 
     files.unshift(pattern(filePath));
   },
-  'chai-as-promised': function (name, files) {
+  'chai-fuzzy': function (name, files) {
+    var underscorePath = path.resolve(require.resolve('underscore'));
     var filePath = require.resolve(name);
     var required = requireUsed(files);
 
+    // RequireJS environment also need chai-adapter, as in most other karma-chai-*
+    files.unshift(pattern(path.join(__dirname, 'chai-fuzzy-adapter.js')));
     if (!required) {
       files.unshift(pattern(path.join(__dirname, 'function-bind-polyfill.js')));
     } else {
       requireAdapter(name, filePath, files, true);
     }
 
-    files.push(pattern(filePath, required));
-  },
-  'sinon-chai': function (name, files) {
-    var filePath = require.resolve(name);
-    var required = requireUsed(files);
-
-    if (required) {
-      requireAdapter(name, filePath, files, true);
-    }
 
     files.push(pattern(filePath, required));
-    files.unshift(pattern(path.resolve(require.resolve('sinon'), '../../pkg/sinon.js')));
-  },
-  'chai-jquery': function (name, files) {
-    var filePath = require.resolve(name);
-    var required = requireUsed(files);
-
-    if (required) {
-      requireAdapter(name, filePath, files, true);
-    }
-
-    files.push(pattern(filePath, required));
-  },
-  'chai-things': function (name, files) {
-    var filePath = require.resolve(name);
-    var required = requireUsed(files);
-
-    if (required) {
-      requireAdapter(name, filePath, files, true);
-    }
-
-    files.push(pattern(filePath, required));
+    files.unshift(pattern(underscorePath))
   }
 };
 
