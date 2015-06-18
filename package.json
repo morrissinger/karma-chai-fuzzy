@@ -1,6 +1,6 @@
 {
-  "name": "karma-chai-plugins",
-  "description": "Chai browser plugins set for Karma",
+  "name": "karma-chai-fuzzy",
+  "description": "Chai Fuzzy for Karma",
   "scripts": {
     "pretest": "eslint . --ignore-path .gitignore",
     "test": "node node_modules/karma/bin/karma start"
@@ -10,41 +10,29 @@
     "karma-plugin",
     "karma-framework",
     "chai",
-    "sinon-chai",
-    "sinon",
-    "jquery",
-    "chai-as-promised",
-    "chai-things"
+    "chai-fuzzy"
   ],
-  "version": "0.6.0",
+  "version": "0.0.1",
   "author": {
-    "name": "Eugene Datsky",
-    "email": "eugene@datsky.ru"
+    "name": "Morris Singer",
+    "email": "morrissinger@gmail.com"
   },
   "main": "./index.js",
   "license": "MIT",
-  "homepage": "https://github.com/princed/karma-chai-plugins",
+  "homepage": "https://github.com/princed/karma-chai-fuzzy",
   "repository": {
     "type": "git",
-    "url": "https://github.com/princed/karma-chai-plugins.git"
+    "url": "https://github.com/princed/karma-chai-fuzzy.git"
   },
   "bugs": {
-    "url": "https://github.com/princed/karma-chai-plugins/issues"
+    "url": "https://github.com/princed/karma-chai-fuzzy/issues"
   },
   "dependencies": {
-    "chai": "^3.0.0",
-    "chai-as-promised": "^5.1.0",
-    "chai-jquery": "^2.0.0",
-    "chai-things": "^0.2.0",
-    "sinon": "^1.15.3",
-    "sinon-chai": "^2.8.0"
+    "chai": "^3.0.0"
   },
   "devDependencies": {
-    "es6-promise": "2.3.0",
-    "eslint": "0.22.1",
-    "jquery": "2.1.4",
     "karma": "0.12.36",
-    "karma-firefox-launcher": "0.1.6",
+    "karma-chrome-launcher": "0.1.6",
     "karma-mocha": "0.1.10",
     "karma-phantomjs-launcher": "0.2.0",
     "phantomjs": "1.9.17"
