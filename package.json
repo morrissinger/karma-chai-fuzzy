@@ -12,20 +12,20 @@
     "chai",
     "chai-fuzzy"
   ],
-  "version": "0.0.91",
+  "version": "0.0.92",
   "author": {
     "name": "Morris Singer",
     "email": "morrissinger@gmail.com"
   },
   "main": "./index.js",
   "license": "MIT",
-  "homepage": "https://github.com/princed/karma-chai-fuzzy",
+  "homepage": "https://github.com/morrissinger/karma-chai-fuzzy",
   "repository": {
     "type": "git",
-    "url": "https://github.com/princed/karma-chai-fuzzy.git"
+    "url": "https://github.com/morrissinger/karma-chai-fuzzy.git"
   },
   "bugs": {
-    "url": "https://github.com/princed/karma-chai-fuzzy/issues"
+    "url": "https://github.com/morrissinger/karma-chai-fuzzy/issues"
   },
   "dependencies": {
     "chai": "^3.0.0",
